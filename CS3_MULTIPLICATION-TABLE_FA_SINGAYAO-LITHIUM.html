@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title> MULTIPLICATION TABLE : SINGAYAO (9-LITHIUM) </title>
+
+<style>
+
+table {
+border-color: #E0FFFF;
+background-color: #FFFACD;
+}
+
+td:nth-child(odd) {
+background-color: #FFFFF0;
+}
+
+</style>
+</head>
+
+<body>
+
+<script>
+
+var n = parseInt(prompt("Input the number of rows (n) within the range of 2-10", "0")); // asks for number of rows
+var m = parseInt(prompt("Input the number of columns (m) with range range of 2-10", "0")); // asks for number of columns
+
+// asks for the number of rows again
+while (n<2 || n>10) {
+var n = parseInt(prompt("ERROR: Not within the range. Input the number of rows (n) AGAIN that is within the range of 2-10", "0"));
+}
+
+// asks for the number of columns again
+while (m<2 || m>10) {
+var m = parseInt(prompt("ERROR: Not within the range. Input the number of columns (m) AGAIN that is within the range of 2-10", "0"));
+}
+
+// to create the table and output
+document.write("<center><table border='1px'>");
+for (var x=1; x<=n; x++) {
+document.write("<tr style='height:40px'>");
+for (var y=1; y<=m; y++) {
+document.write("<td style='width:40px'><center><font size='4'>"+ x*y +' '+"</center></font></td>");
+}
+document.write("</br>");
+}
+document.write("</table></center>");
+
+</script>
+
+</body>
+
+</html>
